@@ -571,7 +571,7 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 40rem;
+
     margin-top: ;
     position: relative;
   }
@@ -581,6 +581,7 @@ a:hover {
     width: 100%;
     position: relative;
     top: 25%;
+    padding: 8%;
   }
 
 
@@ -609,12 +610,12 @@ a:hover {
 
 .footer {
   background-color: #02040a;
-  height: 8rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0% 2%;
+  padding: 2% !important;
   border-top: none !important;
 }
 .logo-footer{
