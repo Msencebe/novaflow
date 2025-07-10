@@ -339,6 +339,7 @@ a:hover {
 
 .s2-slides{
   display: flex;
+  align-items: center;
   flex-direction: column;
   padding: 3% 8%;
 }
