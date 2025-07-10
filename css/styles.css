@@ -15,9 +15,6 @@ html, body {
 }
 
 
-.navbar-collapse{
-  background-color: rgb(9 28 56);
-}
 
 
 #email{
@@ -525,6 +522,7 @@ a:hover {
 .s5-faq{
   padding: 3% 8%;
    color: #D4E2FB !important;
+   justify-content: center;
 }
 
 .accordion{
@@ -614,40 +612,43 @@ a:hover {
 
 
 
-/* ----- FOOTER ------ */
+  /* ----- FOOTER ------ */
 
-.footer {
-  background-color: #02040a;
-  height: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2% !important;
-  border-top: none !important;
-}
-.logo-footer{
-  text-align: left;
-  font-size: 14px;
+  .footer {
+    background-color: #02040a;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2% !important;
+    border-top: none !important;
+  }
+  .logo-footer{
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .logo-footer img{
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+  .footer-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer>p>a{
+    color: #f1faee;
+  }
+
 }
 
-.logo-footer img{
-  max-width: 200px;
-  width: 100%;
-  margin-bottom: 1%;
-}
 
-.footer-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.footer>p>a{
-  color: #f1faee;
-}
-
-}
 
 /* ----- MEDIA QUERYS ------ */
 
@@ -655,19 +656,23 @@ a:hover {
 /* mid-screen */
 
 @media (max-width: 991px) {
-  .form-container{
-    display: flex;
-    justify-content: center;
 
+}
+
+@media (max-width: 768px) {
+
+
+  .nav-cta-btn {
+      display: none;
   }
 
-.form-horizontal{
-width: 90%;
-}
+  .arrow{
+    text-align: center;
+  }
 
-}
-@media (max-width: 767px) {
-
+  .arrow-mobile img {
+    transform: scaleY(-1);
+  }
 
 
 .section-3{
@@ -703,6 +708,10 @@ width: 90%;
 
   .nav-cta-btn{
     display: none ;
+  }
+
+  .navbar-collapse{
+    background-color: rgb(9 28 56);
   }
 
 
