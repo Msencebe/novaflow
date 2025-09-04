@@ -3,7 +3,7 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
-  background: linear-gradient(135deg, #0A1E3C, #030B17, #0A1E3C);
+  background: linear-gradient(135deg, #0a0a23, #030B17, #0a0a23);
   padding: 0;
   width: 100%;
   position: relative;
@@ -199,13 +199,24 @@ a:hover {
 }
 
 .section-1{
-  background: url("../images/background.jpg");
+  /*background: url("../images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+
   height: 40rem;
-  margin-top: ;
   position: relative;
+}
+
+
+#flowCanvas{
+  position:absolute; 
+  top:-55%; 
+  left:0; 
+  width:100%; 
+  background:;  
+  z-index:0;
+  height: 720px !important;
 }
 
 
@@ -226,8 +237,9 @@ a:hover {
 
 #perftxt{
   font-family: Inter;
-  font-size: 10vw;
+  font-size: 7vw;
   font-weight: 700;
+  line-height: 7.5vw;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -282,7 +294,7 @@ a:hover {
 .s2-intro, .s3-intro, .s4-intro, .s5-intro{
   max-width: 800px;
   width: 100%;
-  margin:  3% auto;
+  margin:  10% auto 3%;
   text-align: center;
   padding: 1.5rem 3rem;
 
@@ -336,6 +348,40 @@ a:hover {
 }
 
 
+.img-wrapper {
+  position: relative;
+  display: inline-block; /* se ajusta al tamaño de la imagen */
+}
+
+.img-wrapper img {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 100%; /* opcional: que se adapte al contenedor */
+  height: auto;
+}
+
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -43px; /* lo ajustas según la sombra */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 570px;
+  height: 80px; /* ajusta según la sombra */
+  background: url("../images/Glow_Features.png") no-repeat center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  pointer-events: none; /* no bloquea el hover */
+}
+
+.img-wrapper:hover::after {
+  opacity: 1;
+}
+
+
 
 
 
@@ -377,6 +423,11 @@ a:hover {
   transition: 1s;
   text-align: center;
   height: 300px;
+}
+
+.card-system:hover {
+    transform: translateY(-20px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 .card-system h5{
